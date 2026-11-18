@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- All invitation content (names, dates, events, venue) lives in `src/lib/wedding.ts`; components only read from it, so details change in one place.
+- Invitation sections live in `src/components/invite/`, one file per section, composed in `src/routes/index.tsx`.
+- Video, music and poster are Lovable Assets pointers in `src/assets/*.asset.json`; keep binaries out of the repo.
