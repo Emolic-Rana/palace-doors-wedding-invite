@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useCallback, useEffect, useRef, useState } from "react";
-import music from "@/assets/royal-sitar.mp3.asset.json";
 import { OpeningOverlay } from "@/components/invite/OpeningOverlay";
 import { MusicToggle } from "@/components/invite/MusicToggle";
 import { HeroSection } from "@/components/invite/HeroSection";
@@ -9,6 +8,9 @@ import { CountdownTimer } from "@/components/invite/CountdownTimer";
 import { CoupleGallery } from "@/components/invite/CoupleGallery";
 import { EventSchedule } from "@/components/invite/EventSchedule";
 import { VenueSection } from "@/components/invite/VenueSection";
+
+// Served from public/media so they work on any host (Lovable, Netlify, etc.).
+const MUSIC_URL = "/media/royal-sitar.mp3";
 
 const TITLE = "Ananya & Arjun · Wedding Invitation · 12 Feb 2027";
 const DESCRIPTION =
@@ -82,7 +84,7 @@ function Invitation() {
 
   return (
     <div className="min-h-[100dvh] bg-parchment">
-      <audio ref={audioRef} src={music.url} loop preload="auto" />
+      <audio ref={audioRef} src={MUSIC_URL} loop preload="auto" />
       <OpeningOverlay onEnter={handleEnter} onRevealed={handleRevealed} />
       <MusicToggle muted={muted} onToggle={toggleMute} visible={entered} />
 

@@ -32,4 +32,4 @@ use the editor.
 ## Project rules
 - All invitation content (names, dates, events, venue) lives in `src/lib/wedding.ts`; components only read from it, so details change in one place.
 - Invitation sections live in `src/components/invite/`, one file per section, composed in `src/routes/index.tsx`.
-- Video, music and poster are Lovable Assets pointers in `src/assets/*.asset.json`; keep binaries out of the repo.
+- Opening video, poster and music live in `public/media/` and are referenced by plain `/media/...` paths, because Lovable Assets URLs only resolve on Lovable hosting and the site is also deployed to Netlify.

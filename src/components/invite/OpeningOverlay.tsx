@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import doorsVideo from "@/assets/palace-doors.mp4.asset.json";
-import doorsPoster from "@/assets/palace-doors-poster.jpg.asset.json";
 import { COUPLE } from "@/lib/wedding";
 import { Lotus } from "./Ornaments";
 import { cn } from "@/lib/utils";
+
+// Served from public/media so they work on any host (Lovable, Netlify, etc.).
+const DOORS_VIDEO_URL = "/media/palace-doors.mp4";
+const DOORS_POSTER_URL = "/media/palace-doors-poster.jpg";
 
 type Stage = "idle" | "playing" | "fading" | "done";
 
@@ -85,8 +87,8 @@ export function OpeningOverlay({
     >
       <video
         ref={videoRef}
-        src={doorsVideo.url}
-        poster={doorsPoster.url}
+        src={DOORS_VIDEO_URL}
+        poster={DOORS_POSTER_URL}
         playsInline
         preload="auto"
         onTimeUpdate={handleTimeUpdate}
