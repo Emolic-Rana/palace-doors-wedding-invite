@@ -48,6 +48,11 @@ function Invitation() {
 
   const handleEnter = useCallback(() => {
     setEntered(true);
+  }, []);
+
+  const handleRevealed = useCallback(() => {
+    setRevealed(true);
+    window.scrollTo(0, 0);
     const a = audioRef.current;
     if (!a) return;
     a.volume = 0;
@@ -62,11 +67,6 @@ function Invitation() {
         }, 120);
       })
       .catch(() => setMuted(true));
-  }, []);
-
-  const handleRevealed = useCallback(() => {
-    setRevealed(true);
-    window.scrollTo(0, 0);
   }, []);
 
   const toggleMute = () => {
