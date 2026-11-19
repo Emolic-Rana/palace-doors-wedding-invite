@@ -10,7 +10,7 @@ import { EventSchedule } from "@/components/invite/EventSchedule";
 import { VenueSection } from "@/components/invite/VenueSection";
 
 // Served from public/media so they work on any host (Lovable, Netlify, etc.).
-const MUSIC_URL = "/media/royal-sitar.mp3";
+const MUSIC_URL = "/media/weddingsong.mp3";
 
 const TITLE = "Ananya & Arjun · Wedding Invitation · 12 Feb 2027";
 const DESCRIPTION =
