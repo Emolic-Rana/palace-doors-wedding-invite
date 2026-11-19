@@ -23,7 +23,7 @@ export function HeroSection({ active }: { active: boolean }) {
 
       <div className="relative z-10 flex flex-col items-center">
         <div {...step(0)}>
-          <GaneshaEmblem className="h-24 w-24 animate-float-slow text-gold-deep" />
+          <GaneshaEmblem className="mx-auto h-24 w-24 animate-float-slow text-gold-deep" />
           <p className="mt-2 font-serif text-sm italic text-gold-deep">॥ Shree Ganeshaya Namah ॥</p>
         </div>
 
